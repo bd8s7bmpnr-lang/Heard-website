@@ -46,28 +46,39 @@
         /* Earth horizon artwork */
         .horizon {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 55vh;
-            background: url('./Assets/heard-horizon.png') no-repeat center bottom / 180vw auto;
-            mask-image: linear-gradient(to top, black 0%, black 70%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to top, black 0%, black 70%, transparent 100%);
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                url('./Assets/heard-horizon-mobile.png')
+                no-repeat
+                center calc(100% + 6vh) / 100vw auto;
+            -webkit-mask-image: linear-gradient(
+                to bottom,
+                transparent 0%,
+                transparent 42%,
+                black 62%,
+                black 100%
+            );
+            mask-image: linear-gradient(
+                to bottom,
+                transparent 0%,
+                transparent 42%,
+                black 62%,
+                black 100%
+            );
             pointer-events: none;
             z-index: -1;
         }
 
         @media (min-width: 541px) {
             .horizon {
-                height: 50vh;
-                background-size: clamp(1100px, 115vw, 1700px) auto;
-            }
-        }
-
-        @media (min-width: 1441px) {
-            .horizon {
-                height: 420px;
-                background-size: clamp(1600px, 75vw, 2200px) auto;
+                background-color: #0A0F1F;
+                background-image: url('./Assets/heard-horizon-desktop.png');
+                background-repeat: no-repeat;
+                background-position: center calc(100% + 90px);
+                background-size: clamp(1400px, 100vw, 2200px) auto;
+                background-blend-mode: lighten;
             }
         }
 
