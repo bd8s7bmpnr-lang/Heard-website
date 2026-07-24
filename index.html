@@ -25,6 +25,7 @@
             background: var(--midnight);
             color: var(--white);
             min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -39,6 +40,7 @@
             max-width: 480px;
             margin: 0 auto;
             text-align: center;
+            padding-bottom: 3rem;
         }
 
         /* Subtle Earth horizon glow */
@@ -61,11 +63,17 @@
             border-radius: 22px;
         }
 
+        @media (min-width: 375px) {
+            .icon {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
         /* Brand name */
         .logo {
             font-size: 2.6rem;
             font-weight: 700;
-            letter-spacing: 0.08em;
             margin-bottom: 0.2rem;
         }
 
@@ -80,9 +88,9 @@
         h2 {
             font-size: 1.15rem;
             font-weight: 400;
-            color: var(--soft-gray);
+            color: #9EAABF;
             line-height: 1.7;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.8rem;
         }
 
         .coming-soon {
@@ -91,14 +99,14 @@
             letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--electric-blue);
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         /* Footer */
         .footer {
             font-size: 0.8rem;
-            color: var(--soft-gray);
-            opacity: 0.5;
+            color: #8E9AAF;
+            opacity: 0.4;
         }
 
         /* Responsive */
@@ -116,11 +124,11 @@
             src="./Assets/app-icon.png"
             alt="Heard"
             class="icon"
-            width="100"
-            height="100"
+            width="110"
+            height="110"
         >
 
-        <p class="logo">HEARD</p>
+        <p class="logo">Heard</p>
         <p class="tagline">APRS, made clear.</p>
 
         <h2>Real-time APRS activity around you.<br>Know what's happening. Stay connected.</h2>
