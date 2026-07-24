@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heard — Coming Soon</title>
-    <meta name="description" content="Heard is coming soon. Sign up to be notified.">
+    <title>Heard — APRS, made clear.</title>
+    <meta name="description" content="Heard — Real-time APRS activity around you. Coming soon.">
     <style>
         *, *::before, *::after {
             margin: 0;
@@ -13,36 +13,21 @@
         }
 
         :root {
-            --bg: #0a0a0f;
-            --text: #f0f0f5;
-            --text-muted: #8888a0;
-            --accent: #7c5cfc;
-            --accent-glow: rgba(124, 92, 252, 0.25);
-            --surface: rgba(255, 255, 255, 0.04);
-            --border: rgba(255, 255, 255, 0.08);
-        }
-
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg: #f5f5fa;
-                --text: #1a1a2e;
-                --text-muted: #6b6b85;
-                --accent: #6a4ae8;
-                --accent-glow: rgba(106, 74, 232, 0.18);
-                --surface: rgba(0, 0, 0, 0.03);
-                --border: rgba(0, 0, 0, 0.08);
-            }
+            --midnight: #0A0F1F;
+            --electric-blue: #0A84FF;
+            --deep-navy: #001633;
+            --soft-gray: #8E9AAF;
+            --white: #FFFFFF;
         }
 
         html {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--midnight);
+            color: var(--white);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
         }
 
         body {
@@ -51,245 +36,98 @@
         }
 
         .container {
-            max-width: 520px;
+            max-width: 480px;
             margin: 0 auto;
             text-align: center;
         }
 
-        /* Animated background gradient orbs */
-        .bg-orb {
+        /* Subtle Earth horizon glow */
+        .horizon {
             position: fixed;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.4;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 220px;
+            background: linear-gradient(to top, rgba(10, 132, 255, 0.1), transparent);
             pointer-events: none;
             z-index: -1;
         }
-        .bg-orb--1 {
-            width: 500px; height: 500px;
-            background: var(--accent);
-            top: -150px; left: -100px;
-            animation: float1 12s ease-in-out infinite alternate;
-        }
-        .bg-orb--2 {
-            width: 400px; height: 400px;
-            background: #e85ced;
-            bottom: -120px; right: -80px;
-            animation: float2 14s ease-in-out infinite alternate;
-        }
-        .bg-orb--3 {
-            width: 300px; height: 300px;
-            background: #5ce8d4;
-            bottom: 20%; left: 30%;
-            animation: float3 10s ease-in-out infinite alternate;
-        }
-
-        @keyframes float1 {
-            0%   { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(80px, 60px) scale(1.15); }
-        }
-        @keyframes float2 {
-            0%   { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(-60px, -50px) scale(1.1); }
-        }
-        @keyframes float3 {
-            0%   { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(40px, -30px) scale(1.08); }
-        }
 
         /* App icon */
-        .app-icon {
+        .icon {
             width: 100px;
             height: 100px;
-            border-radius: 24px;
-            margin: 0 auto 1.8rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 60px var(--accent-glow);
-            animation: iconPulse 4s ease-in-out infinite alternate;
-            object-fit: contain;
-            background: var(--surface);
-            border: 1px solid var(--border);
+            margin: 0 auto 1.6rem;
+            border-radius: 22px;
         }
 
-        @keyframes iconPulse {
-            0%   { box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 40px var(--accent-glow); }
-            100% { box-shadow: 0 8px 48px rgba(0,0,0,0.35), 0 0 80px var(--accent-glow); }
-        }
-
-        h1 {
-            font-size: 2.8rem;
+        /* Brand name */
+        .logo {
+            font-size: 2.6rem;
             font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.5rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.2rem;
         }
 
         .tagline {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        /* Email form */
-        .signup {
-            display: flex;
-            gap: 0.6rem;
-            max-width: 420px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .signup input[type="email"] {
-            flex: 1;
-            padding: 0.85rem 1.1rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text);
             font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-
-        .signup input[type="email"]::placeholder {
-            color: var(--text-muted);
-        }
-
-        .signup input[type="email"]:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
-        }
-
-        .signup button {
-            padding: 0.85rem 1.6rem;
-            border-radius: 12px;
-            border: none;
-            background: var(--accent);
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
-        }
-
-        .signup button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 24px var(--accent-glow);
-        }
-
-        .signup button:active {
-            transform: translateY(0);
-        }
-
-        .success-msg {
-            display: none;
-            color: #5ce8a0;
-            font-size: 0.95rem;
-            margin-top: 1rem;
-        }
-
-        /* Social links */
-        .socials {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
+            font-weight: 400;
+            color: var(--electric-blue);
+            letter-spacing: 0.03em;
             margin-bottom: 2rem;
         }
 
-        .socials a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--soft-gray);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
         }
 
-        .socials a:hover {
-            color: var(--accent);
+        .coming-soon {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--electric-blue);
+            margin-bottom: 2.5rem;
         }
 
         /* Footer */
         .footer {
             font-size: 0.8rem;
-            color: var(--text-muted);
-            opacity: 0.6;
+            color: var(--soft-gray);
+            opacity: 0.5;
         }
 
         /* Responsive */
         @media (max-width: 540px) {
-            h1 { font-size: 2.2rem; }
-            .tagline { font-size: 1rem; }
-
-            .signup {
-                flex-direction: column;
-            }
-
-            .signup button {
-                padding: 0.9rem;
-            }
-
-            .app-icon {
-                width: 80px;
-                height: 80px;
-                border-radius: 20px;
-            }
+            .logo { font-size: 2rem; }
+            h2 { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Background orbs -->
-    <div class="bg-orb bg-orb--1"></div>
-    <div class="bg-orb bg-orb--2"></div>
-    <div class="bg-orb bg-orb--3"></div>
+    <div class="horizon"></div>
 
     <div class="container">
-        <!-- App icon -->
         <img
-            src="Assets/app-icon.png"
-            alt="Heard app icon"
-            class="app-icon"
+            src="./Assets/app-icon.png"
+            alt="Heard"
+            class="icon"
             width="100"
             height="100"
         >
 
-        <!-- Title -->
-        <h1>Heard</h1>
-        <p class="tagline">Something great is on its way.<br>Be the first to know when we launch.</p>
+        <p class="logo">HEARD</p>
+        <p class="tagline">APRS, made clear.</p>
 
-        <!-- Email signup -->
-        <form class="signup" id="signupForm" onsubmit="handleSubmit(event)">
-            <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-                autocomplete="email"
-                aria-label="Email address"
-            >
-            <button type="submit">Notify Me</button>
-        </form>
-        <p class="success-msg" id="successMsg">You're on the list! We'll be in touch soon.</p>
+        <h2>Real-time APRS activity around you.<br>Know what's happening. Stay connected.</h2>
 
-        <!-- Social links -->
-        <div class="socials">
-            <a href="mailto:hello@heard.app">Contact</a>
-            <a href="https://github.com/bd8s7bmpnr-lang/Heard-website" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        <p class="coming-soon">Coming Soon</p>
 
-        <!-- Footer -->
-        <p class="footer">&copy; 2026 Heard. All rights reserved.</p>
+        <p class="footer">Built with care for the amateur radio community.</p>
     </div>
-
-    <script>
-        function handleSubmit(e) {
-            e.preventDefault();
-            const form = e.target;
-            const email = form.email.value;
-
-            // For now, just show the success message.
-            // Connect this to your email service (Mailchimp, ConvertKit, etc.)
-            // by replacing this block with a fetch() call to your API.
-            form.style.display = 'none';
-            document.getElementById('successMsg').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
