@@ -43,14 +43,18 @@
             padding-bottom: max(3rem, env(safe-area-inset-bottom, 0px) + 3rem);
         }
 
-        /* Subtle Earth horizon glow */
+        /* Earth horizon artwork */
         .horizon {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 260px;
-            background: linear-gradient(to top, rgba(10, 132, 255, 0.06), transparent 40%);
+            height: 45vh;
+            min-height: 150px;
+            max-height: 320px;
+            background: url('./Assets/heard-horizon.png') no-repeat center bottom / 100% auto;
+            mask-image: linear-gradient(to top, black 0%, black 50%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, black 0%, black 50%, transparent 100%);
             pointer-events: none;
             z-index: -1;
         }
