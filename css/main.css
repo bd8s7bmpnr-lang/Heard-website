@@ -197,7 +197,7 @@ button { font: inherit; }
 .trust-item span { color: var(--muted); font-size: .8rem; }
 
 .section { padding: clamp(5rem, 10vw, 9rem) 0; }
-.section-head { margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+.section-head { margin-bottom: clamp(2.25rem, 5vw, 4rem); }
 .feature-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(3rem, 8vw, 7rem); align-items: center; }
 .feature-row.reverse { grid-template-columns: minmax(360px, .8fr) minmax(0, 1fr); }
 .feature-row.reverse .feature-copy { order: 2; }
@@ -268,7 +268,7 @@ button { font: inherit; }
 .privacy-point strong { display: block; margin-bottom: .3rem; }
 .privacy-point span { color: var(--muted); font-size: .86rem; line-height: 1.5; }
 
-.gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; align-items: start; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.1rem, 2.5vw, 2rem); align-items: start; max-width: 980px; margin-inline: auto; }
 .gallery button {
   --device-radius: 30px;
   --screen-radius: 24px;
@@ -315,7 +315,7 @@ button { font: inherit; }
     linear-gradient(180deg, #12151d, #020307 68%);
   box-shadow: inset 0 1px 1px rgba(255,255,255,.08);
 }
-.gallery button:nth-child(even) { margin-top: 3rem; }
+.gallery button:nth-child(3n + 2) { margin-top: 2.25rem; }
 .gallery img {
   display: block;
   position: relative;
@@ -396,7 +396,7 @@ dialog img { width: 100%; display: block; }
   .feature-row.reverse .feature-copy { order: initial; }
   .device-card { min-height: 620px; }
   .feature-cards { grid-template-columns: repeat(2, 1fr); }
-  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .gallery { grid-template-columns: repeat(3, 1fr); max-width: 900px; }
   .privacy-panel { grid-template-columns: 1fr; }
 }
 
@@ -426,7 +426,8 @@ dialog img { width: 100%; display: block; }
   .device-card { min-height: 560px; }
   .feature-cards, .support-grid, .source-grid { grid-template-columns: 1fr; }
   .privacy-points { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); max-width: 620px; }
+  .gallery button:nth-child(3n + 2) { margin-top: 0; }
   .gallery button:nth-child(even) { margin-top: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
