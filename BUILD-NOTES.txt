@@ -1,0 +1,16 @@
+Heard launch website prepared August 1, 2026.
+
+Assumptions:
+- Product: Heard 1.0 for iPhone, iOS 17+
+- Publisher: Ghost Wind Software
+- Planned product URL: heard.ghostwind.app
+- Planned support address: support@ghostwind.app
+- Current status: App Store approval pending
+
+Review before launch:
+- Final App Store URL
+- Final support email activation
+- Privacy policy vs shipping binary
+- Keychain storage for optional passcodes/credentials
+- Directory licensing/attribution
+- Final public release date
