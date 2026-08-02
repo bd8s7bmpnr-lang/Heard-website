@@ -380,6 +380,13 @@ dialog img { width: 100%; display: block; }
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
 .js .reveal.visible { opacity: 1; transform: none; }
 
+@media (max-width: 1080px) and (min-width: 961px) {
+  .hero-grid { grid-template-columns: minmax(0, .95fr) minmax(390px, .85fr); gap: 2.25rem; }
+  .display { font-size: 5.25rem; }
+  .phone-stage { min-height: 620px; }
+  .hero-device-render { width: min(650px, 108%); }
+}
+
 @media (max-width: 960px) {
   .hero { min-height: auto; padding-bottom: 7rem; }
   .hero-grid { grid-template-columns: 1fr; }
