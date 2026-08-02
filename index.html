@@ -4,13 +4,14 @@
   <script>document.documentElement.classList.add('js')</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Heard — APRS, made clear.</title>
-  <meta name="description" content="Heard for iPhone makes APRS clear with live amateur radio maps, station tracking, callsign details, optional local FCC and ISED directories, and QRZ lookup.">
+  <title>Heard — APRS, made clear for iPhone</title>
+  <meta name="description" content="Heard is a modern iPhone app for exploring live APRS activity, understanding stations, following movement, and looking up callsigns with optional local FCC and ISED directories.">
+  <link rel="preload" as="image" href="./Assets/renders/hero-devices.svg" fetchpriority="high">
   <meta name="theme-color" content="#050916">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Heard — APRS, made clear.">
-  <meta property="og:description" content="Live APRS maps, callsign details, station tracking, and optional local directories for iPhone.">
+  <meta property="og:description" content="Explore live APRS activity, understand stations, follow movement, and look up callsigns with optional local directories for iPhone.">
   <meta property="og:image" content="./Assets/og-heard.jpg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Heard">
@@ -20,7 +21,7 @@
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" href="./css/main.css">
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Heard","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS 17 or later","description":"Live APRS maps, callsign details, station tracking, and optional local FCC and ISED directories for iPhone.","author":{"@type":"Organization","name":"Ghost Wind Software"},"offers":{"@type":"Offer","availability":"https://schema.org/PreOrder","price":"0","priceCurrency":"USD"},"keywords":"APRS, amateur radio, APRS tracking, callsign lookup, APRS-IS"}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Heard","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS 17 or later","description":"A modern iPhone app for exploring live APRS activity, understanding stations, following movement, and looking up callsigns with optional local FCC and ISED directories.","author":{"@type":"Organization","name":"Ghost Wind Software"},"offers":{"@type":"Offer","availability":"https://schema.org/PreOrder","price":"0","priceCurrency":"USD"},"keywords":"APRS, amateur radio, APRS tracking, callsign lookup, APRS-IS"}
   </script>
 </head>
 <body>
@@ -44,11 +45,11 @@
     <div class="container hero-grid">
       <div class="hero-copy reveal">
         <div class="hero-brand"><img src="./Assets/icon-512.png" alt="Heard app icon" width="180" height="180"><div><strong>Heard</strong>APRS, made clear.</div></div>
-        <p class="eyebrow">Live APRS maps & tracking</p>
-        <h1 class="display gradient-text">Hear what’s happening.</h1>
-        <p class="section-lede">Explore live amateur radio activity, understand the stations around you, and follow movement as it unfolds in a focused, modern iPhone app.</p>
-        <div class="button-row"><a class="button primary app-store-placeholder" href="#download" aria-label="App Store launch information for Heard"><span><span class="tiny">Preparing for the</span>App Store</span></a><a class="button secondary" href="#features">Explore Heard</a></div>
-        <p class="hero-note">Receive-only listening by default. Optional APRS messaging when configured.</p>
+        <p class="eyebrow">Modern APRS exploration for iPhone</p>
+        <h1 class="display gradient-text">APRS, made clear.</h1>
+        <p class="section-lede">See live amateur radio activity on a clear map, understand the stations you discover, and follow movement as new APRS reports arrive.</p>
+        <div class="button-row"><a class="button primary app-store-placeholder" href="#download" aria-label="Heard App Store launch information"><span><span class="tiny">Coming soon to the</span>App Store</span></a><a class="button secondary" href="#features">Explore Heard</a></div>
+        <p class="hero-note">Receive-only by default. Optional sending features only when configured.</p>
       </div>
       <div class="phone-stage reveal" aria-label="Heard app screens">
         <div class="phone-glow"></div>
@@ -58,43 +59,43 @@
   </section>
 
   <section class="trust-strip" aria-label="Product highlights"><div class="container trust-grid reveal">
-    <div class="trust-item"><strong>Live APRS</strong><span>Real-time network activity</span></div>
-    <div class="trust-item"><strong>Offline details</strong><span>Optional local directories</span></div>
-    <div class="trust-item"><strong>Station tracking</strong><span>Movement and breadcrumb trails</span></div>
+    <div class="trust-item"><strong>Clear maps</strong><span>Live APRS activity around you</span></div>
+    <div class="trust-item"><strong>Station context</strong><span>Signals, symbols, and details</span></div>
+    <div class="trust-item"><strong>Local directories</strong><span>Optional FCC and ISED lookup</span></div>
     <div class="trust-item"><strong>Private by design</strong><span>No advertising or tracking SDKs</span></div>
   </div></section>
 
   <section class="section" id="features"><div class="container">
-    <div class="section-head reveal"><p class="eyebrow">Designed for discovery</p><h2 class="section-title">A living map of amateur radio activity.</h2><p class="section-lede">Heard turns APRS packets into a clear view of the stations, movement, and local activity happening around you.</p></div>
+    <div class="section-head reveal"><p class="eyebrow">Explore, understand, discover, follow</p><h2 class="section-title">A living map of amateur radio activity.</h2><p class="section-lede">Heard turns APRS packets into a clear view of the stations, movement, identities, and local activity happening around you.</p></div>
     <div class="feature-row">
       <div class="feature-copy reveal"><span class="kicker">EXPLORE</span><h3>See the network around you.</h3><p>Start with a rich, interactive Apple map populated by station-aware symbols. Sort recent activity, browse a clear station list, and move naturally between the map and the details below.</p><ul class="feature-list"><li>Station categories and recognizable symbols</li><li>Freshness, distance, and nearby-place context</li><li>Satellite, standard, and terrain map styles</li></ul></div>
-      <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/map-live-device.svg" alt="Live APRS activity on the Heard map" width="560" height="1060" loading="lazy"></div>
+      <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/map-live-device.svg" alt="Live APRS activity on the Heard map" width="560" height="1060" loading="lazy" decoding="async"></div>
     </div>
   </div></section>
 
   <section class="section"><div class="container"><div class="feature-row reverse">
-    <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/station-detail-device.svg" alt="Station details enriched with a U.S. callsign directory record" width="560" height="1060" loading="lazy"></div>
-    <div class="feature-copy reveal"><span class="kicker">IDENTIFY</span><h3>Go beyond a callsign.</h3><p>Open a station to see what was heard, when it was heard, and the useful information carried in its APRS report. Optional offline directories can add operator and licence details without sending every lookup to a remote service.</p><ul class="feature-list"><li>Operator, club, city, region, and qualification when available</li><li>Speed, course, altitude, status, and technical details</li><li>One-tap QRZ access in an in-app browser</li></ul></div>
+    <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/station-detail-device.svg" alt="Station details enriched with a U.S. callsign directory record" width="560" height="1060" loading="lazy" decoding="async"></div>
+    <div class="feature-copy reveal"><span class="kicker">UNDERSTAND</span><h3>Know what you are seeing.</h3><p>Open a station to see what was heard, when it was heard, and the useful information carried in its APRS report. Heard keeps technical details available while making the common questions easy to answer.</p><ul class="feature-list"><li>Station type, symbol, freshness, and packet context</li><li>Speed, course, altitude, status, and technical details</li><li>Nearby place and distance context when available</li></ul></div>
   </div></div></section>
 
   <section class="section"><div class="container"><div class="feature-row">
-    <div class="feature-copy reveal"><span class="kicker">FOLLOW</span><h3>Track movement as it happens.</h3><p>Choose a moving station and keep it in view as new reports arrive. Heard can preserve your zoom, draw a breadcrumb trail, and reduce the visual weight of everything else.</p><ul class="feature-list"><li>Live following with adaptive station-centered framing</li><li>Configurable trail duration</li><li>Dim other stations when you want to focus</li></ul></div>
-    <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/tracking-device.svg" alt="Heard Track Station mode with live following and a 30-minute trail" width="560" height="1060" loading="lazy"></div>
+    <div class="feature-copy reveal"><span class="kicker">DISCOVER</span><h3>Learn who is behind the callsign.</h3><p>Install the local directories you need, then add operator and licence context to stations and callsign searches without sending every lookup to a remote service.</p><ul class="feature-list"><li>Canadian ISED and U.S. FCC sources</li><li>On-device lookup after installation</li><li>One-tap QRZ access in an in-app browser when you choose it</li></ul></div>
+    <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/directory-device.svg" alt="Heard callsign directory details" width="560" height="1060" loading="lazy" decoding="async"></div>
   </div></div></section>
 
   <section class="section"><div class="container"><div class="feature-row reverse">
-    <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/directory-device.svg" alt="Heard United States callsign directory details" width="560" height="1060" loading="lazy"></div>
-    <div class="feature-copy reveal"><span class="kicker">ENRICH</span><h3>Optional directories, stored on your device.</h3><p>Download the countries you need, then use local lookup to add context to stations and callsigns. Heard keeps each provider independent, clearly identifies the source, and lets you check for updates or remove a directory at any time.</p><ul class="feature-list"><li>Canadian ISED and U.S. FCC sources</li><li>On-device lookup after installation</li><li>Clear record counts, source dates, and storage use</li></ul></div>
+    <div class="device-card reveal"><img class="feature-device-render" src="./Assets/renders/tracking-device.svg" alt="Heard Track Station mode with live following and a 30-minute trail" width="560" height="1060" loading="lazy" decoding="async"></div>
+    <div class="feature-copy reveal"><span class="kicker">FOLLOW</span><h3>Track movement as it happens.</h3><p>Choose a moving station and keep it in view as new reports arrive. Heard can preserve your zoom, draw a breadcrumb trail, and reduce the visual weight of everything else.</p><ul class="feature-list"><li>Live following with adaptive station-centered framing</li><li>Configurable trail duration</li><li>Dim other stations when you want to focus</li></ul></div>
   </div></div></section>
 
   <section class="section"><div class="container">
     <div class="section-head reveal"><p class="eyebrow">The essentials, thoughtfully handled</p><h2 class="section-title">Focused tools without the clutter.</h2></div>
     <div class="feature-cards">
-      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">⌁</div><h3>Nearby listening area</h3><p>Use your current location or choose another area, with the listening radius kept visible and easy to change.</p></article>
+      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">⌁</div><h3>Listening area</h3><p>Use your current location or choose another area manually, with the radius kept visible and easy to change.</p></article>
       <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">⌕</div><h3>Callsign search</h3><p>Search stations already heard and, when a directory is installed, find records that have not appeared live yet.</p></article>
-      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">↗</div><h3>APRS messaging</h3><p>A focused Messages tab is available when you choose to configure sending. Heard remains receive-only by default.</p></article>
-      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">◎</div><h3>Session awareness</h3><p>See the last station, last packet, packet count, station count, and connected duration at a glance.</p></article>
-      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">◫</div><h3>Technical depth</h3><p>Raw packet details and connection diagnostics remain available without overwhelming the primary experience.</p></article>
+      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">↗</div><h3>Optional sending</h3><p>Sending-related features are available only when you deliberately configure them. Heard starts as a receive-only APRS listener.</p></article>
+      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">◎</div><h3>Session status</h3><p>See the last station, last packet, packet count, station count, and connected duration at a glance.</p></article>
+      <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">◫</div><h3>Diagnostics</h3><p>Raw packet details and connection information remain available without overwhelming the primary experience.</p></article>
       <article class="feature-card reveal"><div class="feature-icon" aria-hidden="true">◉</div><h3>Made for iPhone</h3><p>Dark, tactile, and built with native Apple frameworks, accessibility support, and reduced-motion awareness.</p></article>
     </div>
   </div></section>
@@ -107,19 +108,20 @@
   <section class="section" id="screenshots"><div class="container">
     <div class="section-head reveal"><p class="eyebrow">Real screens from Heard</p><h2 class="section-title">Built to feel at home on iPhone.</h2><p class="section-lede">Every screen shown here is from the working app, not a fabricated marketing interface.</p></div>
     <div class="gallery reveal">
-      <button type="button" data-full="./Assets/screenshots/home.webp" aria-label="Enlarge listening dashboard screenshot"><img src="./Assets/screenshots/home.webp" alt="Listening dashboard" width="1320" height="2868" loading="lazy"></button>
-      <button type="button" data-full="./Assets/screenshots/map-live.webp" aria-label="Enlarge live map screenshot"><img src="./Assets/screenshots/map-live.webp" alt="Live map and station list" width="1320" height="2868" loading="lazy"></button>
-      <button type="button" data-full="./Assets/screenshots/station-detail.webp" aria-label="Enlarge station detail screenshot"><img src="./Assets/screenshots/station-detail.webp" alt="Station detail and operator information" width="1320" height="2868" loading="lazy"></button>
-      <button type="button" data-full="./Assets/screenshots/tracking.webp" aria-label="Enlarge tracking screenshot"><img src="./Assets/screenshots/tracking.webp" alt="Station tracking controls" width="1320" height="2868" loading="lazy"></button>
-      <button type="button" data-full="./Assets/screenshots/settings.webp" aria-label="Enlarge settings screenshot"><img src="./Assets/screenshots/settings.webp" alt="Heard settings" width="1320" height="2868" loading="lazy"></button>
+      <button type="button" data-full="./Assets/screenshots/home.webp" aria-label="Enlarge listening dashboard screenshot"><img src="./Assets/screenshots/home.webp" alt="Listening dashboard" width="1320" height="2868" loading="lazy" decoding="async"></button>
+      <button type="button" data-full="./Assets/screenshots/map-live.webp" aria-label="Enlarge live map screenshot"><img src="./Assets/screenshots/map-live.webp" alt="Live map and station list" width="1320" height="2868" loading="lazy" decoding="async"></button>
+      <button type="button" data-full="./Assets/screenshots/station-detail.webp" aria-label="Enlarge station detail screenshot"><img src="./Assets/screenshots/station-detail.webp" alt="Station detail and operator information" width="1320" height="2868" loading="lazy" decoding="async"></button>
+      <button type="button" data-full="./Assets/screenshots/directory.webp" aria-label="Enlarge callsign directory screenshot"><img src="./Assets/screenshots/directory.webp" alt="Callsign directory lookup" width="1320" height="2868" loading="lazy" decoding="async"></button>
+      <button type="button" data-full="./Assets/screenshots/tracking.webp" aria-label="Enlarge tracking screenshot"><img src="./Assets/screenshots/tracking.webp" alt="Station tracking controls" width="1320" height="2868" loading="lazy" decoding="async"></button>
+      <button type="button" data-full="./Assets/screenshots/settings.webp" aria-label="Enlarge settings screenshot"><img src="./Assets/screenshots/settings.webp" alt="Heard settings" width="1320" height="2868" loading="lazy" decoding="async"></button>
     </div>
   </div></section>
 
   <section class="section" id="download"><div class="container"><div class="cta reveal">
     <p class="eyebrow">App Store release</p>
     <h2 class="section-title">The APRS network, made clear.</h2>
-    <p class="section-lede">Heard is preparing for its first public release on iPhone. This area is ready for the official App Store badge and final product link once the app is approved.</p>
-    <div class="button-row"><a class="button primary app-store-placeholder" href="mailto:support@ghostwind.app?subject=Heard%20launch%20updates" aria-label="Ask Ghost Wind Software about Heard launch updates"><span><span class="tiny">Replace with official</span>App Store link</span></a><a class="button secondary" href="./support/">Support URL</a><a class="button secondary" href="./privacy/">Privacy Policy URL</a></div>
+    <p class="section-lede">Heard is preparing for its first public release on iPhone. The official App Store link will appear here when the app is approved.</p>
+    <div class="button-row"><a class="button primary app-store-placeholder" href="mailto:support@ghostwind.app?subject=Heard%20launch%20updates" aria-label="Ask Ghost Wind Software about Heard launch updates"><span><span class="tiny">App Store link</span>Coming soon</span></a><a class="button secondary" href="./support/">Support</a><a class="button secondary" href="./privacy/">Privacy Policy</a></div>
     <p class="cta-note">Contact: <a href="mailto:support@ghostwind.app">support@ghostwind.app</a></p>
   </div></div></section>
 </main>

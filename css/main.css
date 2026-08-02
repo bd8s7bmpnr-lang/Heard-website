@@ -72,7 +72,7 @@ button { font: inherit; }
   width: min(var(--max), calc(100% - 2rem)); min-height: 70px; margin: auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.brand { display: inline-flex; align-items: center; gap: .72rem; text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
+.brand { display: inline-flex; align-items: center; gap: .72rem; text-decoration: none; font-weight: 750; letter-spacing: 0; }
 .brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: 0 0 26px rgba(10,132,255,.28); }
 .brand small { display: block; margin-top: .08rem; color: var(--muted); font-size: .64rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 .nav-links { display: flex; align-items: center; gap: clamp(.85rem, 1.6vw, 1.4rem); }
@@ -84,10 +84,10 @@ button { font: inherit; }
 .container { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
 .narrow { width: min(820px, calc(100% - 2rem)); margin-inline: auto; }
 .eyebrow { margin: 0 0 1rem; color: var(--cyan); font-size: .79rem; font-weight: 760; letter-spacing: .13em; text-transform: uppercase; }
-.display { margin: 0; font-size: clamp(3rem, 8vw, 6.8rem); line-height: .92; letter-spacing: -.07em; }
+.display { margin: 0; font-size: 6rem; line-height: .94; letter-spacing: 0; }
 .gradient-text { background: linear-gradient(130deg, #fff 22%, #77c5ff 68%, #28ddff); background-clip: text; -webkit-background-clip: text; color: transparent; }
-.section-title { margin: 0; max-width: 800px; font-size: clamp(2.25rem, 5vw, 4.7rem); line-height: 1; letter-spacing: -.055em; }
-.section-lede { margin: 1.25rem 0 0; max-width: 690px; color: var(--text); font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.7; }
+.section-title { margin: 0; max-width: 800px; font-size: 4.2rem; line-height: 1.03; letter-spacing: 0; }
+.section-lede { margin: 1.25rem 0 0; max-width: 690px; color: var(--text); font-size: 1.18rem; line-height: 1.7; }
 .muted { color: var(--muted); }
 .kicker { color: var(--blue-bright); font-size: .9rem; font-weight: 720; }
 
@@ -114,7 +114,7 @@ button { font: inherit; }
 .hero-brand { display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.7rem; }
 .hero-brand img { width: 84px; border-radius: 20px; box-shadow: 0 15px 55px rgba(10,132,255,.34); }
 .hero-brand div { color: var(--muted); font-weight: 650; }
-.hero-brand strong { display: block; color: white; font-size: 1.4rem; letter-spacing: -.03em; }
+.hero-brand strong { display: block; color: white; font-size: 1.4rem; letter-spacing: 0; }
 .hero-copy .section-lede { max-width: 600px; }
 .hero-note { display: flex; align-items: center; gap: .55rem; margin-top: 1.3rem; color: var(--muted); font-size: .84rem; }
 .hero-note::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--success); box-shadow: 0 0 14px var(--success); }
@@ -201,7 +201,7 @@ button { font: inherit; }
 .feature-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(3rem, 8vw, 7rem); align-items: center; }
 .feature-row.reverse { grid-template-columns: minmax(360px, .8fr) minmax(0, 1fr); }
 .feature-row.reverse .feature-copy { order: 2; }
-.feature-copy h3 { margin: .6rem 0 1rem; font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1.02; letter-spacing: -.05em; }
+.feature-copy h3 { margin: .6rem 0 1rem; font-size: 3.25rem; line-height: 1.05; letter-spacing: 0; }
 .feature-copy p { color: var(--text); font-size: 1.08rem; line-height: 1.72; }
 .feature-list { list-style: none; padding: 0; margin: 1.6rem 0 0; display: grid; gap: .85rem; }
 .feature-list li { position: relative; padding-left: 1.7rem; color: var(--text); }
@@ -258,7 +258,7 @@ button { font: inherit; }
 .feature-card { position: relative; min-height: 260px; padding: 1.7rem; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(145deg, rgba(18,29,50,.92), rgba(7,12,24,.75)); overflow: hidden; }
 .feature-card::after { content: ""; position: absolute; inset: auto -3rem -5rem auto; width: 10rem; height: 10rem; border-radius: 50%; background: rgba(10,132,255,.18); filter: blur(25px); }
 .feature-icon { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(56,167,255,.32); border-radius: 14px; background: rgba(10,132,255,.1); color: var(--cyan); font-size: 1.3rem; }
-.feature-card h3 { margin: 1.35rem 0 .6rem; font-size: 1.35rem; letter-spacing: -.03em; }
+.feature-card h3 { margin: 1.35rem 0 .6rem; font-size: 1.35rem; letter-spacing: 0; }
 .feature-card p { margin: 0; color: var(--muted); line-height: 1.65; }
 
 .privacy-panel { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: clamp(2rem, 5vw, 4.5rem); border: 1px solid var(--line-strong); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(8,31,61,.9), rgba(5,10,23,.9)); overflow: hidden; box-shadow: var(--shadow); }
@@ -268,7 +268,7 @@ button { font: inherit; }
 .privacy-point strong { display: block; margin-bottom: .3rem; }
 .privacy-point span { color: var(--muted); font-size: .86rem; line-height: 1.5; }
 
-.gallery { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; align-items: start; }
+.gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; align-items: start; }
 .gallery button {
   --device-radius: 30px;
   --screen-radius: 24px;
@@ -350,13 +350,13 @@ dialog img { width: 100%; display: block; }
 
 /* Information pages */
 .page-hero { padding: clamp(5rem, 10vw, 8rem) 0 3rem; }
-.page-hero h1 { margin: 0; font-size: clamp(3rem, 8vw, 5.8rem); letter-spacing: -.065em; line-height: .96; }
+.page-hero h1 { margin: 0; font-size: 5rem; letter-spacing: 0; line-height: 1; }
 .page-hero p { max-width: 700px; color: var(--text); font-size: 1.15rem; line-height: 1.7; }
 .page-meta { display: inline-flex; margin-top: 1rem; padding: .55rem .75rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .78rem; }
 .error-icon { border-radius: 20px; box-shadow: 0 15px 55px rgba(10,132,255,.34); }
 .prose { padding: 1rem 0 7rem; }
 .prose-card { padding: clamp(1.4rem, 4vw, 3rem); border: 1px solid var(--line); border-radius: 26px; background: rgba(13,20,36,.75); }
-.prose h2 { margin: 2.8rem 0 .8rem; font-size: 1.65rem; letter-spacing: -.035em; }
+.prose h2 { margin: 2.8rem 0 .8rem; font-size: 1.65rem; letter-spacing: 0; }
 .prose h2:first-child { margin-top: 0; }
 .prose h3 { margin: 1.7rem 0 .55rem; font-size: 1.1rem; }
 .prose p, .prose li { color: var(--text); line-height: 1.75; overflow-wrap: anywhere; }
@@ -387,6 +387,10 @@ dialog img { width: 100%; display: block; }
   .hero-copy .section-lede { margin-inline: auto; }
   .hero-copy .button-row { justify-content: center; }
   .phone-stage { width: min(760px, 100%); margin: auto; }
+  .display { font-size: 5.2rem; }
+  .section-title { font-size: 3.7rem; }
+  .feature-copy h3 { font-size: 3rem; }
+  .page-hero h1 { font-size: 4.5rem; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .feature-row, .feature-row.reverse { grid-template-columns: 1fr; }
   .feature-row.reverse .feature-copy { order: initial; }
@@ -406,7 +410,10 @@ dialog img { width: 100%; display: block; }
   .hero::after { background-image: url('../Assets/heard-horizon-mobile.png'); width: 900px; height: 760px; bottom: -300px; opacity: .75; }
   .hero-brand { display: grid; justify-items: center; }
   .hero-brand img { width: 74px; }
-  .display { font-size: clamp(3.35rem, 17vw, 5rem); }
+  .display { font-size: 4.6rem; }
+  .section-title { font-size: 3.25rem; }
+  .feature-copy h3 { font-size: 2.6rem; }
+  .page-hero h1 { font-size: 4rem; }
   .phone-stage { min-height: 575px; overflow: hidden; }
   .hero-device-render { width: min(720px, 122%); margin-top: -1rem; }
   .phone, .device-card .phone-single { --device-radius: 42px; --screen-radius: 34px; --frame-width: 6px; --bezel-width: 7px; }
@@ -430,6 +437,11 @@ dialog img { width: 100%; display: block; }
   .button-row { width: 100%; }
   .button { width: 100%; }
   .hero-brand div { text-align: center; }
+  .display { font-size: 3.35rem; }
+  .section-title { font-size: 2.45rem; }
+  .section-lede { font-size: 1.06rem; }
+  .feature-copy h3 { font-size: 2.15rem; }
+  .page-hero h1 { font-size: 3.05rem; }
   .phone-stage { min-height: 460px; }
   .hero-device-render { width: min(620px, 138%); margin-top: .5rem; }
   .phone, .device-card .phone-single { --device-radius: 36px; --screen-radius: 29px; --frame-width: 5px; --bezel-width: 6px; }
